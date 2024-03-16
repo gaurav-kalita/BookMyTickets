@@ -1,5 +1,6 @@
 package dev.Gaurav.BookMyTicket.model;
 
+import dev.Gaurav.BookMyTicket.model.constant.MovieFeatures;
 import jakarta.persistence.Entity;
 import jakarta.persistence.ManyToMany;
 import lombok.Getter;
@@ -9,9 +10,11 @@ import java.util.List;
 
 @Getter
 @Setter
-@Entity //tells that this file should become a table
-public class Actor extends BaseModel {
+@Entity
+public class Movie {
     private String name;
+    private String description;
     @ManyToMany
-    private List<Movie> movies;
+    private List<Actor> actors;
+    private List <MovieFeatures> movieFeatures;
 }

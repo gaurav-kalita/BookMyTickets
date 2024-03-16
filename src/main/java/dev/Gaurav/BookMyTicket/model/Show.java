@@ -1,6 +1,7 @@
 package dev.Gaurav.BookMyTicket.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,5 +16,6 @@ public class Show extends BaseModel {
         private LocalDateTime endDate;
         private Movie movie;
         private Auditorium auditorium;
+        @ManyToMany
         private List<ShowSeat> showSeats;
 }
