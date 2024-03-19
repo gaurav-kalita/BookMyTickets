@@ -8,7 +8,6 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
-import sun.security.krb5.internal.Ticket;
 
 import java.time.LocalDateTime;
 
@@ -20,7 +19,7 @@ public class Payment extends BaseModel{
     private double amount;
     private String referenceId;
     @ManyToOne
-    private Ticket ticket;
+    private Tickets ticket;
     @Enumerated(EnumType.STRING)
     private   PaymentStatus paymentStatus;
     @Enumerated(EnumType.STRING)

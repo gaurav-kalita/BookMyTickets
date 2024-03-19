@@ -1,16 +1,19 @@
 package dev.Gaurav.BookMyTicket.model;
 
 import dev.Gaurav.BookMyTicket.model.constant.ShowSeatStatus;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 ///showseat is virtual identity as "availability" of 'seat' depends on 'show'
+@Getter
+@Setter
+@Entity
 class ShowSeat  extends BaseModel{
     private  int price;
-    @OneToMany
+    @ManyToOne
     private Show show;
-    @OneToMany
+    @ManyToOne
     private Seat seat;
     @Enumerated(EnumType.STRING)
     private ShowSeatStatus showSeatStatus;

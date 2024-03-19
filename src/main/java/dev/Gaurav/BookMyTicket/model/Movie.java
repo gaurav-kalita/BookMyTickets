@@ -11,7 +11,7 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-public class Movie {
+public class Movie extends BaseModel {
     private String name;
     private String description;
     @ManyToMany
