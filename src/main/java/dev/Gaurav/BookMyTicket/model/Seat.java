@@ -11,7 +11,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class Seat extends BaseModel{
+public class  Seat extends BaseModel{
     private int row;
     private int col;
     private  String seatNumber;
@@ -19,4 +19,8 @@ public class Seat extends BaseModel{
     private SeatType seatType;
     @Enumerated(EnumType.STRING)
     private SeatStatus seatStatus;
+
+    public Seat(int i, int i1, String s, SeatType gold, SeatStatus available) {
+        super();
+    }
 }

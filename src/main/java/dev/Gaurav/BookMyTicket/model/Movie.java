@@ -17,4 +17,8 @@ public class Movie extends BaseModel {
     @ManyToMany
     private List<Actor> actors;
     private List <MovieFeatures> movieFeatures;
+
+    public Movie(String titanic, String best_movie_ever) {
+        super();
+    }
 }

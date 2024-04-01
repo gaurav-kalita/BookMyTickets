@@ -9,7 +9,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-class ShowSeat  extends BaseModel{
+public class ShowSeat  extends BaseModel{
     private  int price;
     @ManyToOne
     private Show show;
@@ -17,4 +17,8 @@ class ShowSeat  extends BaseModel{
     private Seat seat;
     @Enumerated(EnumType.STRING)
     private ShowSeatStatus showSeatStatus;
+
+    public ShowSeat(int i, Show show, Seat seatBySeatNumber, ShowSeatStatus available) {
+        super();
+    }
 }
